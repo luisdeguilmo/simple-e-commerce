@@ -1,0 +1,130 @@
+/* General Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins'
+}
+
+body {
+    background-color: rgb(239, 239, 239);
+}
+
+/* Centers the main title */
+h1 {
+    text-align: center;
+}
+
+/* Adds vertical padding to headings for better spacing */
+h1,
+h2 {
+    padding: 20px 0;
+}
+
+/* Adds padding to the main content for separation */
+main {
+    padding: 40px 0;
+}
+
+/* Section Styles */
+section .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.product-container {
+    display: grid;
+    grid: auto / repeat(2, 1fr);
+    gap: 10px;
+}
+
+.product-item {
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: white;
+}
+
+.product-name {
+    margin-bottom: 10px;
+}
+
+.product-item img {
+    width: 100px;
+    height: 150px;
+}
+
+.product-item div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-item button {
+    padding: 6px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: green;
+    border-radius: 2px;
+    font-size: .7rem;
+    text-wrap: nowrap;
+}
+
+.price {
+    font-size: .7rem;
+    text-wrap: nowrap;
+}
+
+.cart, 
+.cart-item {
+    display: flex;
+    gap: 10px;
+}
+
+.cart {
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 600px;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.cart-item {
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: white;
+}
+
+.cart-item img {
+    width: 60px;
+    height: 80px;
+}
+
+.price-container {
+    width: max-content;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Layout on different screens */
+/* Adjusts the product grid layout for medium and large screens */
+@media screen and (min-width: 700px) {
+    .product-container {
+        grid: auto / repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .product-container {
+        grid: auto / repeat(4, 1fr);
+    }
+}
